@@ -139,6 +139,9 @@
       list.sort(function(a, b) {return a[name]-b[name]});
     };
 
+    uj.chkConsole = function(){
+
+    };
 
     //sleep (args:time[ms])
     uj.sleep = function(time){
@@ -161,6 +164,7 @@
       console.log("debug end")
       return result;
     };
+
 
     
     //initial
