@@ -75,7 +75,7 @@
     };
 
     //checkbox check
-    uj.checkboxCheck = function(is_check, id){
+    uj.checkCheckbox = function(is_check, id){
       var cb;
       if(id){
         cb = document.getElementById(id).querySelectorAll("input[type='checkbox']");
@@ -117,6 +117,19 @@
       }
     };
 
+    //Is touchEvent available?
+    uj.isTouch = function(){
+      if("createTouch" in document) return true;
+      else return false;
+    };
+
+    uj.SortNumber = function(ary){
+      ary.sort(function(a,b) {return a-b;});
+    };
+
+  //sort
+
+
     //sleep (args:time[ms])
     uj.sleep = function(time){
       var d1 = new Date().getTime();
@@ -138,14 +151,14 @@
       console.log("debug end")
       return result;
     };
+
     
     //initial
     uj.flash = chkFlash();
     uj.ios = checkiOS();
     uj.android = checkAndroid();
-    window.uj = uj;    
+    window.uj = uj;
 })();
-
 
 
 /** 
@@ -159,6 +172,6 @@ uj.newFunc = function(){
 //EventListener
 //------------------------------------------------------------------------------
 //DOMContentLoaded
-document.addEventListener("DOMContentLoaded",function(){
+document.addEventListener("DOMContentLoaded",function(){},false);
+window.addEventListener("load", function(){}, false);
 
-},false);
