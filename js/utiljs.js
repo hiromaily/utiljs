@@ -139,7 +139,21 @@
       list.sort(function(a, b) {return a[name]-b[name]});
     };
 
+    //console
+    uj.chkConsole = function(){
+      console.log('console.log');
+      console.debug('console.debug');
+      console.error('console.error');
+      console.warn('console.warn');
+      console.info('console.info');
 
+      var obj = ["aaaa","bbbb",3,function(){}];
+      console.log(obj);
+      console.dir(obj);
+      
+      console.trace();
+    };
+  
     //sleep (args:time[ms])
     uj.sleep = function(time){
       var d1 = new Date().getTime();
