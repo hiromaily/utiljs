@@ -123,11 +123,21 @@
       else return false;
     };
 
-    uj.SortNumber = function(ary){
+    //sort
+    uj.sortNumber = function(ary){
+      //ary = [104,45,5,98,3,24,17,10,7];
       ary.sort(function(a,b) {return a-b;});
     };
 
-  //sort
+    uj.sortList = function(ary, name){
+      /*
+      var list = [
+        {"no":3, "cat":5, "body":"test1"},
+        {"no":2, "cat":4, "body":"test2"},
+        {"no":4, "cat":5, "body":"test3"}
+      ];*/
+      list.sort(function(a, b) {return a[name]-b[name]});
+    };
 
 
     //sleep (args:time[ms])

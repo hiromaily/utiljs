@@ -30,6 +30,29 @@ console.log("android version is " + uj.android);
 uj.debugStart();
 uj.sleep(1000);
 console.log(uj.debugEnd());
+
+var num = [104,45,5,98,3,24,17,10,7];
+console.log("num:"+num);
+uj.sortNumber(num);
+console.log("num:"+num);
+
+var list = [
+  {"no":3, "cat":5, "body":"test1"},
+  {"no":2, "cat":4, "body":"test2"},
+  {"no":4, "cat":5, "body":"test3"},
+  {"no":6, "cat":3, "body":"test4"},
+  {"no":1, "cat":4, "body":"test5"}
+];
+uj.sortList(list,"no");
+console.dir("list:"+list);
+console.log(list[0]);
+console.log(list[1]);
+console.log(list[2]);
+console.log(list[3]);
+console.log(list[4]);
+
+
+
 //]]>
 </script>
 </body>
