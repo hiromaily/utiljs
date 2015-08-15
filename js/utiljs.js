@@ -152,6 +152,9 @@
       console.dir(obj);
       
       console.trace();
+
+      var debug=1;
+      console.assert(debug == 0,'this result is false');
     };
   
     //sleep (args:time[ms])
@@ -175,6 +178,7 @@
       console.log("debug end")
       return result;
     };
+
 
     
     //initial
