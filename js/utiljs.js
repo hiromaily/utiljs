@@ -2,13 +2,12 @@
 (function(){
     var uj = function(){};
     //public
-    uj.variable = 100;
+    uj.debug = 1;
     uj.flash;
     uj.ios;
     uj.android;
 
     //private
-    var _variable = 50;
     var _s_time;
     
 //------------------------------------------------------------------------------
@@ -154,7 +153,7 @@
       console.trace();
 
       var debug=1;
-      console.assert(debug == 0,'this result is false');
+      console.assert(uj.debug == 0,'this result is false');
     };
   
     //sleep (args:time[ms])
